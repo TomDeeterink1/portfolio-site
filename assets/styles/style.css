@@ -47,11 +47,42 @@ h4{
     .primary--button:hover{
         cursor: pointer;
         background-color: var(--white);
+        padding: 0.8em 4em 0.8em 2em;
         transform: scale(97%);
         transition: ease-in 0.2s;
     }
+     /* &after on hover */
+     .primary--button:hover::after{
+        content:"►";
+        position: absolute;
+        margin-left: 1.5em;
+    }
 /* links */
-
+.secondary--link{
+    padding: 0.8em 2em;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--white);
+    color: var(--tom-black);
+    font-weight: 600;
+    font-size: 1em;
+    transform: scale(100%);
+    transition: ease-out 0.2s;
+}
+    /* &hover */
+    .secondary--link:hover{
+        cursor: pointer;
+        background-color: var(--pink);
+        padding: 0.8em 4em 0.8em 2em;
+        transform: scale(97%);
+        transition: ease-in 0.2s;
+    }
+    /* &after on hover */
+    .secondary--link:hover::after{
+        content:"►";
+        position: absolute;
+        margin-left: 1.5em;
+    }
 /* header */
 header{
     background-color: var(--tom-black);
@@ -117,6 +148,11 @@ header{
     display: flex;
     margin: 0 auto;
 }
+#s1-home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 #s1-home h1,p{
     color: var(--white);
 }
@@ -127,6 +163,10 @@ header{
     max-width: 500px;
     margin: 0px;
     padding-bottom: 2em;
+}
+#s1-home .secondary--link{
+    margin-top: 1em;
+    left: 0;
 }
 /* end of first home section */
 footer{
