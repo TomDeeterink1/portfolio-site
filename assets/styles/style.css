@@ -29,6 +29,29 @@ h4{
     font-weight: 500;
 }
 
+/* buttons */
+
+/* primary button */
+.primary--button{
+    padding: 0.8em 2em;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--accent);
+    color: var(--tom-black);
+    font-weight: 600;
+    font-size: 1em;
+    transform: scale(100%);
+    transition: ease-out 0.2s;
+}
+    /* &hover */
+    .primary--button:hover{
+        cursor: pointer;
+        background-color: var(--white);
+        transform: scale(97%);
+        transition: ease-in 0.2s;
+    }
+/* links */
+
 /* header */
 header{
     background-color: var(--tom-black);
@@ -89,11 +112,22 @@ header{
 }
 #s1-home{
     max-width: 1200px;
-    padding: 0em 1em;
+    padding: 6em 1em;
     height: 100vh;
     display: flex;
+    margin: 0 auto;
 }
-
+#s1-home h1,p{
+    color: var(--white);
+}
+#s1-home h1{
+    margin-bottom: 0.5em;
+}
+#s1-home p{
+    max-width: 500px;
+    margin: 0px;
+    padding-bottom: 2em;
+}
 /* end of first home section */
 footer{
     position: absolute;
