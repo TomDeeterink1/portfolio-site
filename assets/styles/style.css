@@ -57,6 +57,32 @@ h4{
         position: absolute;
         margin-left: 1.5em;
     }
+/* secondary button */
+.secondary--button{
+    padding: 0.8em 2em;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--pink);
+    color: var(--tom-black);
+    font-weight: 600;
+    font-size: 1em;
+    transform: scale(100%);
+    transition: ease-out 0.2s;
+}
+    /* &hover */
+    .secondary--button:hover{
+        cursor: pointer;
+        background-color: var(--blue);
+        padding: 0.8em 4em 0.8em 2em;
+        transform: scale(97%);
+        transition: ease-in 0.2s;
+    }
+     /* &after on hover */
+     .secondary--button:hover::after{
+        content:"►";
+        position: absolute;
+        margin-left: 1.5em;
+    }
 /* links */
 .secondary--link{
     padding: 0.8em 2em;
@@ -76,18 +102,21 @@ h4{
         padding: 0.8em 4em 0.8em 2em;
         transform: scale(97%);
         transition: ease-in 0.2s;
+        border: none;
     }
     /* &after on hover */
     .secondary--link:hover::after{
         content:"►";
         position: absolute;
         margin-left: 1.5em;
+        
     }
 /* header */
 header{
     background-color: var(--tom-black);
     position: sticky;
     top: 0;
+    z-index: 99;
 }
 
 #wrapper-header{
@@ -135,6 +164,10 @@ header{
         transform: scale(105%);
         transition: ease-in 0.2s;
     }
+    /* &before */
+    .social-header::before{
+        content: "Social media";
+    }
 /* end of header */
 
 /* first home section */
@@ -159,6 +192,9 @@ header{
 #s1-home h1{
     margin-bottom: 0.5em;
 }
+#s1-home h1 > span{
+    color: var(--pink);
+}
 #s1-home p{
     max-width: 500px;
     margin: 0px;
@@ -168,8 +204,29 @@ header{
     margin-top: 1em;
     left: 0;
 }
+
+#s1-home .secondary--button{
+    margin-top: 1em;
+    left: 0;
+}
+#s1-home .secondary--button:hover::after{
+    content: "";
+}
+
 /* end of first home section */
+
+/* second section homepage */
+.s2-wrapper{
+    background-color: var(--accent);
+}
+#s2-home{
+    max-width: 1200px;
+    padding: 6em 1em;
+    height: 50vh;
+    display: flex;
+    margin: 0 auto;
+}
+/* end of second section homepage */
 footer{
-    position: absolute;
-    bottom: 0;
+   
 }
