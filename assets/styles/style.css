@@ -84,6 +84,35 @@ h4{
         margin-left: 1.5em;
     }
 /* links */
+/* primary link */
+.primary--link{
+    padding: 0.8em 2em;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--tom-black);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1em;
+    transform: scale(100%);
+    transition: ease-out 0.2s;
+}
+    /* &hover */
+    .primary--link:hover{
+        cursor: pointer;
+        background-color: var(--blue);
+        padding: 0.8em 4em 0.8em 2em;
+        transform: scale(97%);
+        transition: ease-in 0.2s;
+        border: none;
+    }
+    /* &after on hover */
+    .primary--link:hover::after{
+        content:"►";
+        position: absolute;
+        margin-left: 1.5em;
+        
+    }
+/* secondary link */
 .secondary--link{
     padding: 0.8em 2em;
     border-radius: 4px;
@@ -177,7 +206,7 @@ header{
 #s1-home{
     max-width: 1200px;
     padding: 6em 1em;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     margin: 0 auto;
 }
@@ -210,14 +239,14 @@ header{
     left: 0;
 }
 #s1-home .secondary--button:hover::after{
-    content: "";
+    content: "▼";
 }
 
 /* end of first home section */
 
 /* second section homepage */
 .s2-wrapper{
-    background-color: var(--accent);
+    background-color: var(--pink);
 }
 #s2-home{
     max-width: 1200px;
@@ -225,7 +254,54 @@ header{
     height: 50vh;
     display: flex;
     margin: 0 auto;
+    flex-direction: column;
 }
+#s2-home .s2-titel{
+max-width: 700px;
+}
+#s2-home .s2-titel h1{
+    
+}
+
+#s2-home .s2-titel p{
+    
+}
+
+#s2-home .s2-grid{
+    padding: 2em 0em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 0px;
+}
+.s2-grid article{
+    padding: 2em 2em;
+    background-color: #fff;
+    border-radius: 0.25em;
+}
+.s2-grid article p{
+    margin-top: -1em;
+    color: var(--pink);
+}
+
+.s2-grid article h3{
+    margin: 0em 1em 1em 0em;
+    color: var(--tom-black);
+}
+/* different childs of articles !only edit when needed!*/
+    /* .s2-grid article:nth-child(1){
+        
+    }
+    .s2-grid article:nth-child(2){
+        
+    }
+    .s2-grid article:nth-child(3){
+        
+    }
+    .s2-grid article:nth-child(4){
+        
+    } */
 /* end of second section homepage */
 footer{
    
