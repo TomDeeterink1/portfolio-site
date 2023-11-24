@@ -1,15 +1,29 @@
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-/* root colors */
+
 
 :root{
+    /* root colors */
     --main: #fff;
     --primary: #07072b;
     --secondary: #DB59DE;
     --alternative: #41BBE0;
     --accent: #E0A600;
+    
+    /* root paddings */
+    --desktopspacing: 0em 1em;
+    --tabletspacing: 0em 1em;
+    --phonespacing: 0em 0.8em;
+
+    /* Root radius */
+    --smalradius: 4px;
+    --mediumradius: 8px;
+    --largeradius: 14px;
+    --fullradius: 100px;
+
+
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* main fonts */
 h1{
