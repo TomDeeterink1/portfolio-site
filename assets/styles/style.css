@@ -419,19 +419,47 @@ text-align: center;
 .skills--showcase article{
     height: 200px;
     width: 200px;
+    transition: ease-out 0.5s;
 }
 .skills--showcase article:nth-child(1){
  background-color: var(--accent);
  border-radius: 10em 0em 0em 10em;
  grid-area: 1 / 1 / 2 / 2;
- 
-
 }
+ /* hover*/
 .skills--showcase article:nth-child(1):hover{
-    background-color: var(--accent);
     border-radius: 0em 0em 0em 0em;
-    width: 400px;
+    transform: scaleX(200%);
+    margin-left: -100px;
+    transition: ease-in 0.4s;
    }
+   /* h2 display*/
+   .skills--showcase article:nth-child(1) h2{
+    transform: scaleX(100%);
+   }
+   /* h2 display on hover card*/
+    .skills--showcase article:nth-child(1):hover h2{
+        transform: scaleX(50%);
+    }
+    /* p display */
+    .skills--showcase article:nth-child(1) p{
+        display: none;
+       }
+    /* p display on hover card */
+    .skills--showcase article:nth-child(1):hover p{
+        display: block;
+        transform: scaleX(50%);
+       }
+   /* button display */
+   .skills--showcase article:nth-child(1) button{
+    display: none;
+   }
+    /* button display on hover card */
+   .skills--showcase article:nth-child(1):hover button{
+    display: block;
+    transform: scaleX(50%);
+   }
+
 .skills--showcase article:nth-child(2){
 background-color: var(--alternative);
 grid-area: 1 / 2 / 2 / 3; 
